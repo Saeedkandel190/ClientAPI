@@ -16,4 +16,8 @@ name: string;
     this.count += 1;
   }
 
+  displayTest(){
+    console.log('im testing');
+  }
+
 }
