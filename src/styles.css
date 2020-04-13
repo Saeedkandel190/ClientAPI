@@ -1,0 +1,40 @@
+/* You can add global styles to this file, and also import other style files */
+@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+@import "../node_modules/font-awesome/css/font-awesome.min.css";
+
+
+body{
+    margin: 0;
+    font-size: 18px;;
+}
+.container{
+    width: 80%;
+    margin: 0 auto;
+}
+header{
+    background-color: #f233de;
+    padding: 1em 0;}
+
+    header a{
+        color: white;
+        text-decoration: none;
+        
+    }
+    header a.logo{
+        font-weight: bold;
+    }
+
+    nav{
+        float: right;
+    }
+    nav ul{
+        list-style-type: none;
+        display: flex;
+        margin: 0;
+    }
+    nav ul li a{
+        padding: 1em;
+    }
+    nav ul li :hover{
+        background: #a233d1;
+    }

@@ -1,0 +1,34 @@
+<div class=postContainer>
+  <h1>Adding New Post</h1>
+  <table class="tblPost">
+    <tr>
+      <td>Date</td>
+      <td><input type="text" [(ngModel)]="currentEmployee.date"></td>
+    </tr>
+
+    <tr>
+      <td>Transformc</td>
+      <td><input type="text" [(ngModel)]="temperatureC"></td>
+    </tr>
+
+    <tr>
+      <td>TransformF</td>
+      <td><input type="text" [(ngModel)]="temperatureF"></td>
+    </tr>
+
+    <tr>
+      <td>Summary</td>
+      <td>
+        <textarea [(ngModel)]="currentEmployee.summary"></textarea>
+      </td>
+    </tr>
+
+    <tr>
+      <td colspan="3">
+        <input type="button" value="Post Data" style="margin-right: 35px; float: right;width: 200px;" (click)="postdata()">
+      </td>
+     
+    </tr>
+
+  </table>  
+</div>

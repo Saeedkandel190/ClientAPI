@@ -1,0 +1,25 @@
+.postContainer{
+    width: 60%;
+    border-radius: 4%;
+    margin: .3em;
+    padding:.7em;
+    background: #abc1;
+}
+.tblPost{
+   
+    width:80%;
+    
+    margin: .6em;
+}
+table.tblPost tr td{
+    padding-bottom: .8em;
+    
+}
+table.tblPost tr td input,textarea{
+    width: 90%;
+}
+
+table.tblPost tr td:nth-child(1){
+    color: rgb(32, 32, 23);;
+    
+}

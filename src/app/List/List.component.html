@@ -1,0 +1,18 @@
+<h1>Welcome Guys thus is API Data</h1>
+<input type="button" value="Post" style="margin-bottom: 2em" (click)="Show()">
+<span >Number of Boxs is </span><span class="note"><strong> {{datalist.length}}</strong></span>
+<ul *ngIf="datalist">
+<li *ngFor="let x of datalist">
+  <p class="name">{{x.weatherForcastId}}:{{x.name}}</p>
+  <p class="country">{{x.summary}}</p>
+  <a class="site" href="{{x.date}}">Site</a>
+  
+</li>
+
+</ul>
+
+<div class="newPostCom" [style.display]="isVisible?'block':'none'">
+    <app-NewItem></app-NewItem>
+  </div>
+
+
