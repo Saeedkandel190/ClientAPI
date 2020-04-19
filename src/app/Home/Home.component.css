@@ -4,7 +4,7 @@ span{
     cursor: pointer;
     padding: .3em .8em;
     user-select: none;
-    display: none;
+    display: inline;
 }
 .playcontainer{
     border: black 1px solid;

@@ -12,9 +12,8 @@ GetData(){
 }
 
 PostData(employyToAdd: Employy){
-  
-  
-  return this.httpClient.post('http://localhost:50085/weatherforecast/',employyToAdd);
+
+  return this.httpClient.post('http://localhost:50085/weatherforecast', employyToAdd);
 }
 }
 

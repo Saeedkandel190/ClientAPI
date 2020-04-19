@@ -1,0 +1,18 @@
+<div class="container mt-5">
+  <div class="text-center" *ngIf="!registerMode"> 
+  <h1>Sign Out</h1>
+  <p class="lead">Register to can login to the system</p>
+  <div class="text-center">
+    <button class="btn btn-primary btn-lg mr-3" (click)="registerToggle()">Register</button>
+    <button class="btn btn-primary btn-lg">learn more</button>
+  </div></div>
+
+  <div class="container" *ngIf="registerMode">
+    <div class="row justify-content-center">
+      <div class="col-7">
+
+    <app-Register (editRegisterMode)="ToggleRegisterFromChild()"></app-Register>
+    
+    
+  </div>
+</div>

@@ -10,6 +10,7 @@ body{
 .container{
     width: 80%;
     margin: 0 auto;
+    margin-top: 45px;
 }
 header{
     background-color: #f233de;
