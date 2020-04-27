@@ -8,7 +8,7 @@ import { map } from 'rxjs/operators';
   styleUrls: ['./Register.component.css']
 })
 export class RegisterComponent implements OnInit {
-
+  SrcAudio: any;
   model: any={};
   @Input() RegisterMode:boolean;
   @Output() editRegisterMode = new EventEmitter();
@@ -21,25 +21,13 @@ export class RegisterComponent implements OnInit {
    
   Register(){
     this.Message='';
+    
    this.httpClientService.Register(this.model).subscribe(Response=>{
     
         this.res=Response;
-        
+        this.CreateFile(this.res.helloTest);
           this.Message="User Resgistered Successfully"
-   },error =>
-  {
-    this.res=error;
-    
-    if(this.res.error.errors!=null)
-    {
-     if(this.res.error.errors.userName!=null)
-        this.Message=this.res.error.errors.userName;
-        if(this.res.error.errors.userPassword!=null)
-        this.Message+= "   "+this.res.error.errors.userPassword;
-    }
-    else
-   this.Message=this.res.error;
-  });
+   });
 }
   cancel()
   {
@@ -50,5 +38,23 @@ export class RegisterComponent implements OnInit {
   EmptyMessage(){
   this.Message='';
   }
+
+  changeAudio(src: any){
+  
+  
+
+    this.SrcAudio=src;
+    return false;
+      }
+    
+      CreateFile(data: any)
+      {
+        
+       const blob = new Blob([data], { type: 'audio/wav' });
+        
+        let url= window.URL.createObjectURL(blob);
+        alert(url);
+        this.SrcAudio= url;
+      }
 }
 
